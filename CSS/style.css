@@ -1,0 +1,165 @@
+/* 全局样式 */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+.container{
+max-width: 1024px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+/* header 样式 */
+header {
+background-color: #333;
+color: #fff;
+padding: 10px 0;
+}
+
+header h1 {
+font-size: 36px;
+padding: 0;
+margin: 0 20px;
+}
+
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: row;
+}
+
+nav ul li {
+margin: 0 10px;
+}
+
+nav ul li a {
+color: #fff;
+text-decoration: none;
+}
+
+/* hero 样式 */
+#hero {
+background-color: #f7f7f7;
+padding: 50px 0;
+text-align: center;
+}
+
+#hero h2 {
+font-size: 30px;
+margin: 0;
+padding: 0;
+}
+
+article {
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 3px;
+margin: 20px;
+padding: 10px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+article h3 {
+font-size: 24px;
+margin: 0;
+padding: 0;
+}
+
+article p {
+font-size: 16px;
+line-height: 1.5;
+margin: 10px 0;
+padding: 0;
+}
+
+article a.btn {
+display: inline-block;
+background-color: #333;
+color: #fff;
+padding: 5px 10px;
+border-radius: 3px;
+text-decoration: none;
+}
+
+/* about 样式 */
+#about {
+background-color: #fff;
+padding: 50px 0;
+text-align: center;
+}
+
+#about img {
+max-width: 200px;
+margin: 20px;
+border-radius: 50%;
+box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#about h2 {
+font-size: 30px;
+margin: 0;
+padding: 0;
+}
+
+#about p {
+font-size: 16px;
+line-height: 1.5;
+margin: 10px 0;
+padding: 0;
+}
+
+/* subscribe 样式 */
+#subscribe {
+background-color: #eee;
+padding: 50px 0;
+text-align: center;
+}
+
+#subscribe h2 {
+font-size: 30px;
+margin: 0;
+padding: 0;
+}
+
+#subscribe p {
+font-size: 16px;
+line-height: 1.5;
+margin: 10px 0;
+padding: 0;
+}
+
+form input[type=“email”] {
+padding: 10px;
+border-radius: 3px;
+border: none;
+}
+
+form button.btn {
+display: inline-block;
+background-color: #333;
+color: #fff;
+padding: 10px 20px;
+border-radius: 3px;
+text-decoration: none;
+margin-left: 10px;
+border: none;
+cursor: pointer;
+}
+
+/* footer 样式 */
+footer {
+background-color: #333;
+color: #fff;
+padding: 10px 0;
+text-align: center;
+}
+
+footer p {
+margin: 0;
+padding: 0;
+font-size: 14px;
+}
