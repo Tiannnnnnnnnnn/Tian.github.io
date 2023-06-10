@@ -1,0 +1,52 @@
+class A（objet）:
+	def show(self):
+		print("a")
+
+类B继承了A类
+class B （A）:
+	def show(self):
+		print("b")
+
+可以得知，B类中重写了A类的show方法
+
+初始化B类
+B = B（）
+B.show()  会调用B类中的方法 show
+
+如果想调用A类中的方法
+
+B.__class__=A 将实例指向类A
+B.show()  调用了A类中的方法
+
+
+super的使用方法
+
+1、python中特殊的类
+2、super()是使用super类创建的对象
+3、常使用在重写父类方法，调用在父类中封装的方法实现
+class C （A）:
+	def jj():
+	super().__init__(a,b)  C的父类A如果有init初始化方法，则可使用该方法调用
+	一般在init方法中使用
+	super().show  这个是在C类中调用A类中的方法
+
+
+
+def __call__(self):
+	pass
+
+call方法，将实例化的类作为方法直接调用
+
+如
+class A（object）:
+	def __init__(self,name):
+		self.name = name
+
+	def __call__(self):
+		print("hello"+self.name)
+
+有两种调用方式：
+实例化 a = A（123）
+
+方法1 a.__call__()
+方法2 a()

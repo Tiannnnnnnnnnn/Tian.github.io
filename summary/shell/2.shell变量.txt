@@ -1,0 +1,114 @@
+定义变量:
+
+your_name="tian"
+变量名只可以使用英文字母、数字和下划线。不能以数字为首
+不能使用空格、不能使用关键字
+
+语句赋值变量
+
+for file in `ls /etc`   
+` ` 里的语句会被优先执行
+
+使用变量
+
+使用美元符 $ 可以使用变量
+
+your_name="tian"
+echo $your_name 或者 echo ${your_name} 两种方式
+$your_name 这种方式 使用的时字符串变量
+
+your_name=1
+$[your_name] 使用的是数值变量
+
+
+{} 可加可不加，加了是方便解释器识别变量的边界
+如:
+echo "I am good at $skillScript" 
+echo "I am good at ${skill}Script"  识别的变量就不一样
+
+可以设置变量的的属性，如可以设置变量为只读
+
+your_name="tian"
+readonly your_name 
+
+后续二次复制your_name 变量就会出现报错
+
+
+unset your_name 此指令可以删除变量
+
+变量类型：
+1、局部变量  
+  局部变量再脚本或命令中定义，仅再当前shell实例中有效，
+其他shell启动的程序不能访问局部变量
+2、环境变量
+所有程序，包裹shell启动的程序，都能访问环境变量。
+3、shell变量
+shell变量是由shell程序设置的特殊变量
+
+
+单引号：单引号里的任何字符都会原样输出，单引号字符串中的变量是无效的
+单引号内不能出现单单引号，转移出现也不可以，可以成对出现做字符串的拼接
+双引号：内部可以使用$ 或转义\获取特殊字符的作用（可以有变量和转移符）
+
+
+
+字符串：
+
+your_name="aasdfsadf" 字符串可以使用单引号也可以使用双引号
+
+字符串拼接
+
+”adfa”sdfsdf$your_name““,可以实现字符串的拼接
+
+
+获取字符串的长度,数组同理
+
+string="abcd"
+echo ${#string} 
+
+提取子字符串
+echo ${string:1:3}  #输出 bcd
+
+查找子字符串
+
+echo `expr index "$string" in` #输出3  
+查找字符io,哪个先出现就输出哪个
+
+
+数组
+
+bash支持一维数组
+array_name=(value1 value2 balue3...)
+
+读取数组
+
+val1=${arry_name[1]} 获取下标为1的数据
+
+获取数组的元素个数
+len=${#array_name[@]}或者[*]
+
+获取单个元素的长度
+len1=${#arrat_name[1]}
+
+shell 注释
+以#开头的行就是注释
+
+多行注释
+：<<EOF
+。。
+。。
+。。
+EOF
+
+EOF也可以使用其他符号
+
+关联数组
+
+bash支持关联数组，类似字典
+
+使用declare -A来进行声明
+例子：声明一个关联数组site
+declare -A site=(["google"]="www.google.com" ["runoob"]="www.runoob.com" ["taobao"]="www.taobao.com")
+
+["google"] 表示数组的下标
+

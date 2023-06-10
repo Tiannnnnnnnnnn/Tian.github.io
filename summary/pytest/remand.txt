@@ -1,0 +1,18 @@
+默认情况
+测试文件：test_开头或_test结尾
+测试类： Test_开头，不能有init方法
+测试函数或方法 test_开头
+
+
+1、编写测试用例
+2、构造测试数据
+3、数据驱动，执行测试用例
+4、输出测试报告
+
+常用断言：
+assert a  判断为真
+assert not a 判断非真
+assert a==b 判断相等
+assert a!=b 判断不相等
+assert a in b 判断a包含在b中
+assert a not in b 判断a不在b中
